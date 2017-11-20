@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
 
     <!--Page Title-->
-    <title>Namari - Free Landing Page Template</title>
+    <title>Beautiful & Wonderful World!</title>
 
     <!--Meta Keywords and Description-->
     <meta name="keywords" content="">
@@ -28,6 +28,9 @@
 
     <!--Google Webfonts-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Map CSS Files -->
+    <link rel="stylesheet" href="css/map.css">
 </head>
 <body>
 
@@ -147,12 +150,16 @@
                     <h1>A FREE AND SIMPLE LANDING PAGE</h1>
                     <h2>Namari is a free landing page template you can use for your projects. It is free to use for your
                         personal and commercial projects, enjoy!</h2>
+                        <div id="control"><input type="checkbox" checked id="north-up"></div>
                 </div>
 
                 <!--Call to Action-->
                 <a href="#" class="button">START CREATING TODAY</a>
                 <!--End Call to Action-->
 
+            </div>
+            <div class="custom-map">
+                <div id="map"></div>
             </div>
 
         </div><!--End of Row-->
@@ -563,7 +570,12 @@
 <script src="js/images-loaded.min.js"></script>
 <script src="js/lightbox.min.js"></script>
 <script src="js/site.js"></script>
+<script src="js/d3.min.js"></script>
+<script src="js/topojson.min.js"></script>
+<script src="js/app.min.js"></script>
+<script>
+    $("#map>canvas").width = $(document).width();
 
-
+</script>
 </body>
 </html>

@@ -297,6 +297,8 @@ section {
 
 .col-38 {
     width: 38.2%;
+    position: relative;
+    z-index: 50;
 }
 
 /* --------- 2.1 Header --------- */
@@ -783,7 +785,7 @@ h6 {
 }
 
 #banner-content.row {
-    padding-top: 170px;
+    padding-top: 100px;
     padding-bottom: 100px;
 }
 
@@ -2324,6 +2326,7 @@ blockquote {
     .slvj-lightbox iframe, .slvj-lightbox object, .slvj-lightbox embed {
         height: 432px !important;
     }
+
 
 }
 

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Animated World Zoom</title>
+<style>
+.breadcrumbs {
+    font-size: small;
+    text-align: center;
+    width: 100%;
+    padding: 5px 0;
+    margin: 0;
+    font-style: italic;
+    border-bottom: solid #eee 1px;
+    color: #000;
+  }
+  
+  .breadcrumbs a {
+    color: #669;
+  }
+  
+  .breadcrumbs a:hover {
+    color: #000;
+  }
+  
+  p.cite {
+    text-align: right;
+    font-size: small;
+    font-style: italic;
+  }
+  
+  p.cite, p.cite a, p.caption, p.caption a {
+    color: #666;
+  }
+  
+  p.caption {
+    text-align: center;
+    font-size: small;
+    font-style: italic;
+    width: 400px;
+    margin: 0 auto;
+  }
+  
+  body {
+    margin-top: 0;
+    font-family: Georgia, serif;
+    text-align: center;
+    background: #fff;
+  }
+  
+  p, li {
+    line-height: 1.5em;
+  }
+  
+  h1, h2, h3 {
+    font-weight: 300;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+  }
+  
+  canvas {
+    cursor: move;
+  }
+  
+  .wrapper {
+    width: 600px;
+    margin: 1em auto;
+    text-align: left;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .thumb {
+    width: 200px;
+    height: 220px;
+    text-align: center;
+    float: left;
+  }
+  
+  .thumb img {
+    width: 200px;
+    height: 174px;
+    border: none;
+  }
+  
+  .clear {
+    clear: both;
+  }
+  
+  blockquote {
+    border-left: solid #eee 5px;
+    padding: 0 15px;
+    margin: 0;
+  }
+  
+  .copyright {
+    font-size: small;
+  }
+  
+
+#control {
+  width: 960px;
+  margin: 0 auto;
+  text-align: right;
+  font-size: small;
+  font-style: italic;
+  color: #666;
+}
+</style>
+
+<p class="breadcrumbs"><a href="http://www.jasondavies.com/">Jason Davies</a> → <a href="../">Maps</a>
+
+<h1>Animated World Zoom</h1>
+<div id="map"></div>
+<div id="control"><label for="north-up"><input type="checkbox" checked id="north-up"> North is up</label></div>
+
+<div class="wrapper">
+  <p>This is a variation of van Wijk and Nuij’s <a href="http://www.win.tue.nl/~vanwijk/zoompan.pdf">Smooth and efficient zooming and panning</a>.
+  The origin of the projection moves along a geodesic (the shortest path on a sphere) between the two points.
+
+  <p>You can also interact with the globe using a mouse or touch, as described in <a href="../rotate/">Rotate the World</a>.
+  The transition to a random country happens when a zoom gesture finishes.
+
+  <h2>See Also</h2>
+
+  <ul>
+    <li>Mike Bostock’s <a href="http://bl.ocks.org/mbostock/4183330">World Tour</a> and <a href="http://bl.ocks.org/mbostock/6242308">Map Zooming</a>.
+    <li>Many thanks to <a href="http://bost.ocks.org/mike">Mike Bostock</a> and <a href="http://www.win.tue.nl/~vanwijk/">Jack van Wijk</a> for their help and suggestions.
+  </ul>
+
+  <p class="cite">Data: Natural Earth <a href="http://www.naturalearthdata.com/downloads/110m-cultural-vectors/">1:110m Cultural Vectors</a>
+</div>
+
+<script src="../../d3.min.js"></script>
+<script src="../../topojson.min.js"></script>
+<script src="../../app.min.js"></script>
