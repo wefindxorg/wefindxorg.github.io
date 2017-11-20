@@ -95,18 +95,18 @@ figure {
 }
 
 .page-border > .top-border, .page-border > .right-border, .page-border > .bottom-border, .page-border > .left-border {
-    padding: 11px;
+    padding: 6px;
     background: #ccc;
 }
 
 .page-border .bottom-border, .page-border .top-border {
     width: 100%;
-    padding: 10px;
+    padding: 5px;
     left: 0;
 }
 
 .page-border .left-border, .page-border .right-border {
-    padding: 10px;
+    padding: 5px;
     height: 100%;
     top: 0;
 }
